@@ -5,7 +5,7 @@ Given(/^que o site não possui registros$/, () => {
         method: 'GET',
         status: 200,
         fixture: 'webtable-get-vazio'
-    }).as('getNewtable');
+    }).as('getNewtableVazio');
 });
 
 When(/^acessar a listagem$/, () => {
@@ -21,7 +21,7 @@ Given(/^que o site possui apenas um registro$/, () => {
         method: 'GET',
         status: 200,
         fixture: 'webtable-get-unico'
-    }).as('getNewtable');
+    }).as('getNewtableUnico');
 });
 
 Then(/^devo visualizar apenas um registro$/, () => {

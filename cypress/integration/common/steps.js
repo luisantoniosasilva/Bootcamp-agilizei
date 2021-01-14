@@ -9,5 +9,6 @@ Given(/^que acesso o site$/, () => {
         .as('getNewtable');
 
     // URL
-    cy.visit('Register.html');
+    cy.visit('Register.html').as('newvisit');
+    cy.wait('@newvisit');
 });
