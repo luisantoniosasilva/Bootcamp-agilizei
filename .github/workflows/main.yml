@@ -40,7 +40,7 @@ jobs:
       - run: npm install
       
       # Executar os testes usando o cucumber
-      - run: npm run cy:run:cucumber
+      - run: npx cypress run --config-file cypress-cucumber.json --spec **/All.features
         
       # Gerar o relatório
       - run: npm run report:cucumber
