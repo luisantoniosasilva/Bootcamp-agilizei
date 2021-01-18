@@ -38,15 +38,15 @@ When(/^salvar$/, () => {
 Then(/^devo ser cadastrado com sucesso$/, () => {
     // ASSERTIVAS
     cy.wait('@postNewtable').then((resNewtable) => {
-        expect(resNewtable.response.statusCode).to.eq(200)
+        expect(resNewtable.status).to.eq(200)
     });
 
     cy.wait('@postUsertable').then((resUsertable) => {
-        expect(resUsertable.response.statusCode).to.eq(200)
+        expect(resUsertable.status).to.eq(200)
     });
 
     cy.wait('@getNewtable').then((resNewtable) => {
-        expect(resNewtable.response.statusCode).to.eq(200)
+        expect(resNewtable.status).to.eq(200)
     });
 
     cy.url().should('contain', 'WebTable')
